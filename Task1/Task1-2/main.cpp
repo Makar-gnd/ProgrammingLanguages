@@ -9,18 +9,18 @@ using namespace std;
  * \brief
  * \param side_a (Длина первой стороны треугольника)
  * \param side_b (Длина второй стороны треугольника)
- * \param angle (Значение угла между сторонами в градусах)
+ * \param angle_rad (Значение угла между сторонами в радианах)
  * \return side_c (Длина третей стороны треугольника)
 */
-double get_side_c(const double side_a, const double side_b, const double angle);
+double get_side_c(const double side_a, const double side_b, const double angle_rad);
 /**
  * \brief
  * \param side_a (Длина первой стороны треугольника)
  * \param side_b (Длина второй стороны треугольника)
- * \param angle (Значение угла между сторонами в градусах)
+ * \param angle_rad (Значение угла между сторонами в радианах)
  * \return area (Площадь треугольника)
 */
-double get_area(const double side_a, const double side_b, const double angle);
+double get_area(const double side_a, const double side_b, const double angle_rad);
 /**
 * \brief
 * \param side_a (Длина первой стороны треугольника)
@@ -32,9 +32,16 @@ double get_area(const double side_a, const double side_b, const double angle);
 double get_radius(const double side_a, const double side_b, const double side_c, double area);
 /**
 * \brief
+* \param angle (Значение угла в градусах)
+* \return angle_radian (значение угла в радианах)
+*/
+double get_angle(const double angle);
+/**
+* \brief
 * \Точка входа в программу.
 * \return 0 в случае успеха.
 */
+
 int main()
 {
 	double side_a;
@@ -46,20 +53,26 @@ int main()
 	cin >> side_b;
 	cout << "input angle in degrees:";
 	cin >> angle;
-	const double area = get_area(side_a, side_b, angle);
-	const double side_c = get_side_c(side_a, side_b, angle);
+	const double angle_radian = get_angle(angle);
+	const double area = get_area(side_a, side_b, angle_radian);
+	const double side_c = get_side_c(side_a, side_b, angle_radian);
 	const double radius = get_radius(side_a, side_b, side_c, area);
 	cout << "side_a=" << side_a << " ,side_b=" << side_b << " ,side_c=" << side_c << " ,area=" << area << " ,radius=" << radius;
 	cout << std::endl;
 	return 0;
 }
-double get_side_c(const double side_a, const double side_b, const double angle)
+
+double get_angle(const double angle)
 {
-	return sqrt(pow(side_a, 2) + pow(side_b, 2)) - (2 * side_a * side_b * cos(angle * M_PI / 180));
+	return (angle *(M_PI/180));
 }
-double get_area(const double side_a, const double side_b, const double angle)
+double get_side_c(const double side_a, const double side_b, const double angle_radian)
 {
-	return ((side_a * side_b * sin((angle * M_PI / 180)) / 2));
+	return sqrt(pow(side_a, 2) + pow(side_b, 2)) - (2 * side_a * side_b * cos(angle_radian));
+}
+double get_area(const double side_a, const double side_b, const double angle_radian)
+{
+	return ((side_a * side_b * sin((angle_radian)) / 2));
 }
 double get_radius(const double side_a, const double side_b, double side_c, double area)
 {
