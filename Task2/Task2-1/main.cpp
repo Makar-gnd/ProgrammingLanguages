@@ -1,17 +1,17 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <cmath>
 using namespace std;
 /**
  * \brief
- * \param A Число A.
- * \param N Число N.
- * \return Значение числа A умноженное в N раз.
+ * \param A Р§РёСЃР»Рѕ A.
+ * \param N Р§РёСЃР»Рѕ N.
+ * \return Р—РЅР°С‡РµРЅРёРµ С‡РёСЃР»Р° A СѓРјРЅРѕР¶РµРЅРЅРѕРµ РІ N СЂР°Р·.
  */
 double get_A1(double A, double N);
 /**
  * \brief
- * \Точка входа в программу.
- * \return 0 в случае успеха.
+ * \РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ.
+ * \return 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°.
  */
 int main()
 {
