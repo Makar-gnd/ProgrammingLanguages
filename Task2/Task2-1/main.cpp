@@ -3,11 +3,11 @@
 using namespace std;
 /**
  * \brief
- * \param A Число A.
- * \param N Число N.
- * \return Значение числа A умноженное в N раз.
+ * \param a Число a.
+ * \param n Число n.
+ * \return Значение числа a умноженное в n раз.
  */
-double get_A1(double A, double N);
+double get_a1(const double a, const double n);
 /**
  * \brief
  * \Точка входа в программу.
@@ -15,23 +15,23 @@ double get_A1(double A, double N);
  */
 int main()
 {
-    double N;
-    double A;
-    cout << "input A:";
-    cin >> A;
-    cout << "input N: ";
-    cin >> N;
-    double A1 = get_A1(A, N);
-    cout << "A*N=";
-    cout << A1;
-    cout << ", A*2N=";
-    cout << A1 * 2;
-    cout << ", A*3N=";
-    cout << A1 * 3;
+    double n;
+    double a;
+    cout << "input a:";
+    cin >> a;
+    cout << "input n: ";
+    cin >> n;
+    double a1 = get_a1(a, n);
+    cout << "a*n=";
+    cout << a1;
+    cout << ", a*2n=";
+    cout << a1 * 2;
+    cout << ", a*3n=";
+    cout << a1 * 3;
     cout << endl;
     return 0;
 }
-double get_A1(double A, double N)
+double get_a1(const double a, const double n)
 {
-    return (A * N);
+    return (a * n);
 }
