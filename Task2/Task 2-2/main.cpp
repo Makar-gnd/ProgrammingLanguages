@@ -31,7 +31,7 @@ int main()
 	{
 		y = get_y1(a, x);
 	}
-	else if ((a * x) >= 1)
+	else
 	{
 		y = get_y2(a, x);
 	}
