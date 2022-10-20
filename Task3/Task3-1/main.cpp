@@ -1,22 +1,25 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <cmath>
 using namespace std;
+
 /**
 * \brief
-* \param x аргумент функции
-* \return true если существует
+* \param x Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \return true РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚
 */
 bool is_exists(const double x);
+
 /**
 * \brief
-* \param x аргумент функции
-* \return значение функции в точке x
+* \param x Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \return Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё РІ С‚РѕС‡РєРµ x
 */
 double get_y(const double x);
+
 /**
 * \brief 
-* \точка входа в программу 
-* \return 0 в случае успеха
+* \С‚РѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ 
+* \return 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°
 */
 int main()
 {
@@ -33,7 +36,7 @@ int main()
 		}
 		else
 		{
-			cout <<"x= " << x << " y= " << "нет решения" << "\n";
+			cout <<"x= " << x << " y= " << "РЅРµС‚ СЂРµС€РµРЅРёСЏ" << "\n";
 		}
 		x += step;
 	}
@@ -42,7 +45,7 @@ int main()
 
 bool is_exists(const double x)
 {
-	return true;
+	return (1 - x) > 0;
 }
 
 double get_y(const double x)
