@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 #include <iomanip>
 #include<string>
@@ -6,51 +6,51 @@ using namespace std;
 
 /**
  * \brief
- * \Ôóíêöèÿ ðàñ÷¸òà òî÷íîñòè âû÷èñëåíèÿ ñóììû ÷ëåíîâ ïîñëåäîâàòåëüíîñòè
- * \param message ñîîáùåíèå ïîëüçîâàòåëþ
- * \return òî÷íîñòü âû÷èñëåíèÿ ÷ëåíîâ ïîñëåäîâàòåëüíîñòè
- * \exception invalid_argument åñëè òî÷íîñòü ìåíüøå èëè ðàâíà 0
+ * \Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚Ð¸ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ ÑÑƒÐ¼Ð¼Ñ‹ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
+ * \param message ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŽ
+ * \return Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
+ * \exception invalid_argument ÐµÑÐ»Ð¸ Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð¸Ð»Ð¸ Ñ€Ð°Ð²Ð½Ð° 0
 */
 double get_epsilon(const string& message = "");
 
 /**
  * \brief
- * \Ôóíêöèÿ ðàñ÷¸òà ñóììû ôóíêöèîíàëüíîãî ðÿäà
- * \param epsilon ïîðîãîâîå çíà÷åíèå
- * \param step øàã âû÷èñëåíèÿ
- * \return çíà÷åíèå ñóììû ôóíêöèîíàëüíîãî ðÿäà
+ * \Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° ÑÑƒÐ¼Ð¼Ñ‹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ñ€ÑÐ´Ð°
+ * \param epsilon Ð¿Ð¾Ñ€Ð¾Ð³Ð¾Ð²Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ
+ * \param step ÑˆÐ°Ð³ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ
+ * \return Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÑƒÐ¼Ð¼Ñ‹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ñ€ÑÐ´Ð°
 */
 double get_sum(const double epsilon, const double step);
 
 /**
 * \brief
- * \param x ïàðàìåòð ôóíêöèè
- * \return y çíà÷åíèå ôóíêöèè
+ * \param x Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+ * \return y Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
 */
 double get_y(double x);
 
 /**
  * \brief
- * \Ôóíêöèÿ ðàñ÷¸òà êîë÷åñòâà ÷ëåíîâ ïîñëåäîâàòåëüíîñòè
- * \param message ñîîáùåíèå ïîëüçîâàòåëþ
- * \return h øàã ïîñëåäîâàòåëüíîñòè
- * \exception invalid_argument åñëè øàã áîëüøå çàäàííîãî ïðîìåæóòêà
+ * \Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° ÐºÐ¾Ð»Ñ‡ÐµÑÑ‚Ð²Ð° Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
+ * \param message ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŽ
+ * \return h ÑˆÐ°Ð³ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
+ * \exception invalid_argument ÐµÑÐ»Ð¸ ÑˆÐ°Ð³ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚ÐºÐ°
 */
 double get_step(const string& message = "");
 
 /**
  * \brief
- * \ôóíêöèÿ ðàñ÷¸òà ðåêóððåíòíîãî ÷ëåíà ïîñëåäîâàòåëüíîñòè
- * \param x ïàðàìåòð ôóíêöèè
- * \param n íîìåð ÷ëåíà ôóíêöèîíàëüíîãî ðÿäà
- * \return çíà÷åíèå ðåêóððåíòíîãî ÷ëåíà ïîñëåäîâàòåëüíîñòè
+ * \Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° Ñ€ÐµÐºÑƒÑ€Ñ€ÐµÐ½Ñ‚Ð½Ð¾Ð³Ð¾ Ñ‡Ð»ÐµÐ½Ð° Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
+ * \param x Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+ * \param n Ð½Ð¾Ð¼ÐµÑ€ Ñ‡Ð»ÐµÐ½Ð° Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ñ€ÑÐ´Ð°
+ * \return Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ€ÐµÐºÑƒÑ€Ñ€ÐµÐ½Ñ‚Ð½Ð¾Ð³Ð¾ Ñ‡Ð»ÐµÐ½Ð° Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸
 */
 double get_recurrent(double x, const size_t n);
 
 /**
  * \brief
- * \òî÷êà âõîäà â ïðîãðàììó
- * \return 0 â ñëó÷àå óñïåõà
+ * \Ñ‚Ð¾Ñ‡ÐºÐ° Ð²Ñ…Ð¾Ð´Ð° Ð² Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ
+ * \return 0 Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ ÑƒÑÐ¿ÐµÑ…Ð°
 */
 int main()
 {  
@@ -58,8 +58,8 @@ int main()
 
     try
     {   
-        const double step = get_step("Ââåäèòå øàã âû÷èñëåíèÿ ");
-        const auto epsilon = get_epsilon("Ââåäèòå òî÷íîñòü âû÷èñëåíèÿ ");
+        const double step = get_step("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ°Ð³ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ ");
+        const auto epsilon = get_epsilon("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ ");
 
         double current = -0.76;
         const auto x_finish = 1;
@@ -98,7 +98,7 @@ double get_step(const string& message)
 
     if (step > THRESHOLD)
     {
-        throw invalid_argument("×èñëî äîëæíî áûòü áîëüøå " + to_string(THRESHOLD));
+        throw invalid_argument("Ð§Ð¸ÑÐ»Ð¾ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ " + to_string(THRESHOLD));
     }
 
     return step;
@@ -117,7 +117,7 @@ double get_sum(const double epsilon, const double step)
     while (abs(get_recurrent(x, n)) > epsilon)
     {
         sum += get_recurrent(x, n);
-        n += 1;
+        n ++;
         x += step;
     }
     return sum;
@@ -133,7 +133,7 @@ double get_epsilon(const string& message)
 
     if (epsilon < THRESHOLD)
     {
-        throw invalid_argument("×èñëî äîëæíî áûòü áîëüøå " + to_string(THRESHOLD));
+        throw invalid_argument("Ð§Ð¸ÑÐ»Ð¾ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ " + to_string(THRESHOLD));
     }
 
     return epsilon;
